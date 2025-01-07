@@ -6,11 +6,13 @@ public abstract class AbstractFactory {
 }
 
 class Windows extends AbstractFactory{
+    @Override
     public Button createButton(){
         WinButton b1 = new WinButton();
         return b1;
     }
     
+    @Override
     public Checkbox createCheckbox(){
         WinCheckbox c1 = new WinCheckbox();
         return c1;
@@ -18,11 +20,13 @@ class Windows extends AbstractFactory{
 }
 
 class Mac extends AbstractFactory{
+    @Override
     public Button createButton(){
         MacButton b1 = new MacButton();
         return b1;
     }
     
+    @Override
     public Checkbox createCheckbox(){
         MacCheckbox c1 = new MacCheckbox();
         return c1;
