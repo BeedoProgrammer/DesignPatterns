@@ -52,3 +52,20 @@ public class Burger {
  
 }
 
+class Director{
+    private Burger.BurgerBuilder builder;
+
+    public Director(Burger.BurgerBuilder builder) {
+        this.builder = builder;
+    }
+    
+    public Burger makeCheeseBurger(){
+        return  builder.side("sauce").drink("Maxi").build();
+    }
+}
+
+class Director1{
+    public Burger makeCheeseBurger(){
+        return new Burger.BurgerBuilder("Cheese burger").side("sauce").drink("Maxi").build();
+    }
+}
